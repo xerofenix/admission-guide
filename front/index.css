@@ -1,0 +1,42 @@
+/* Resetting some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Full viewport height for the main section */
+body,
+html {
+    height: 100%;
+}
+
+
+
+/* Main Section Styling */
+.main-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    background-image: url('\\photo\\ma-lib.jpg');
+    /* Replace with actual image path */
+    background-size: cover;
+    background-position: center;
+    color: #4d2323;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.main-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.main-content p {
+    font-size: 18px;
+    /* max-width: 600px; */
+    text-align: center;
+}
+
