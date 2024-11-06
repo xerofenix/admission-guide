@@ -1,0 +1,80 @@
+<!-- Header Section with Navigation Bar -->
+<header>
+    <nav class="navbar">
+        <div id="logo">
+            <a href="index.html">
+                <img src="/photo/logo1.webp" alt="AAAGuide">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-amu.html">About AMU</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#contact">Feedback</a></li>
+        </ul>
+    </nav>
+</header>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Full viewport height for the main section */
+    body,
+    html {
+        height: 100%;
+    }
+
+    /* Navbar styling */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1px;
+        background-color: rgb(138, 5, 5);
+        color: #fff;
+        height: 50px;
+
+    }
+
+    #logo img {
+        margin: 1px 15px;
+        height: 30px;
+        width: 30px;
+        border-radius: 100px;
+        position: relative;
+        top: 3px;
+
+    }
+
+    #logo a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        margin-right: 50px;
+    }
+
+    .nav-links li {
+        margin-left: 20px;
+    }
+
+    .nav-links a {
+        /* font-size: larger; */
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+        color: #8f8d7d;
+    }
+</style>
