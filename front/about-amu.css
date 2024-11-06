@@ -1,0 +1,31 @@
+/* Resetting some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Full viewport height for the main section */
+body,
+html {
+    height: 100%;
+}
+
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    color: #000000;
+    text-align: center;
+    padding: 0 20px;
+}
+
+#about-amu {
+    justify-content: center;
+
+}

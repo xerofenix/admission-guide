@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMU Automated Admission Guide</title>
+    <link rel="stylesheet" href="about-amu.css">
+    <link rel="shortcut icon" href="/photo/logo1.webp" type="image/x-icon">
+</head>
+
+<body>
+    <!-- including navigation bar -->
+    <div id="navbar"></div>
+
+    <main class="content">
+        <section id="about-amu">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit pariatur suscipit
+            consectetur dolore earum, quam corrupti explicabo illum. Soluta omnis cumque optio maiores dignissimos
+            voluptatibus tenetur blanditiis, corporis in aliquam illo exercitationem ipsum quaerat eligendi ipsa
+            officiis
+            ipsam? Aliquam officiis aut amet hic incidunt vitae fugit, adipisci rerum odio quidem? Provident odio
+            corrupti
+            pariatur sapiente optio doloremque. Suscipit quos esse numquam ad temporibus nihil ex harum modi! Cum quam
+            corporis ipsam a quibusdam maiores unde provident iure velit iste enim odit ad laborum minima doloribus quos
+            aliquam, tempora ea minus blanditiis magni reiciendis rerum numquam facere! Sapiente nihil dolorum ex.
+        </section>
+
+        <section id="about-founder">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus veritatis consequatur quas aut beatae
+            quia velit dolorem ab repellat inventore dolorum amet dicta accusantium, molestiae illo laborum nesciunt sit
+            tenetur perspiciatis tempore! Quis aut nesciunt amet atque voluptatibus perferendis sapiente voluptates, quo
+            debitis quaerat quibusdam repellendus accusantium nam dolor voluptate in fugit sunt eligendi, quas deleniti
+            cupiditate tempore quidem illum! Corrupti perferendis vero rem qui. Velit officia minus quia deleniti ullam
+            ducimus cupiditate incidunt commodi, quae optio cumque distinctio quidem enim tenetur earum veritatis
+            nostrum eligendi ipsa vel aliquam doloribus amet. Ea dolorem facilis quae doloribus vero id quasi est.
+        </section>
+
+
+    </main>
+
+
+    <!-- including footer  -->
+    <div id="footer"></div>
+
+    <script>
+        fetch('header.html').then(response => response.text()).then(data => document.getElementById('navbar').innerHTML = data)
+        fetch('footer.html').then(response => response.text()).then(data => document.getElementById('footer').innerHTML = data)
+    </script>
+</body>
+
+</html>
