@@ -15,18 +15,31 @@ html {
 
 
 /* Main Section Styling */
+
+.main-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('\\photo\\ma-lib.jpg'); /* Replace with actual image path */
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px); /* Adjust blur intensity */
+    opacity: 0.7; /* Adjust opacity to further enhance readability */
+    z-index: -1; /* Position it behind the content */
+}
+
 .main-section {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 90vh;
-    background-image: url('\\photo\\ma-lib.jpg');
-    /* Replace with actual image path */
-    background-size: cover;
-    background-position: center;
-    color: #4d2323;
-    text-align: center;
-    padding: 0 20px;
+    height: 100%;
+    color: #070101;
+    /* text-align: center; */
+    /* padding: 0 20px; */
+   
 }
 
 .main-content h1 {
