@@ -1,0 +1,107 @@
+/* Resetting some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Full viewport height for the main section */
+body,
+html {
+    height: 100%;
+}
+
+
+.fb-section {
+    display: flex;
+    justify-content: center;
+    height: 105vh;
+    color: #070101;
+    background-color: rgb(196, 199, 201);
+   
+}
+
+
+
+.fb-content {
+    width: 100%;
+    /* max-width: 400px; */
+    max-width: 95vh;
+    margin: 17vh 10vh;
+    padding: 2vh 2vw;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.fb-content h1{
+    text-align: center;
+    margin: 0vh 1vh;
+   
+}
+
+/* Form label styling */
+.fb-content label {
+    font-size: 1rem;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 5vh;
+    font-weight: bold;
+}
+
+
+/* Input fields styling */
+.fb-content input[type="email"],
+.fb-content input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.fb-content input[type="text"]{
+    height: 5rem;
+}
+
+/* Focus effect for input fields */
+.fb-content input[type="email"]:focus,
+.fb-content input[type="text"]:focus {
+    border-color: #007bff;
+}
+
+/* Submit button styling */
+.fb-content button {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for submit button */
+.fb-content button:hover {
+    background-color: #0056b3;
+}
+
+
+#pp-fb h3{
+    margin: 2vh 0vh;
+    text-align: center;
+}
+
+#pp-fb li{
+    margin: 2vh 0vh;
+    
+}
