@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMU Automated Admission Guide</title>
+    <link rel="stylesheet" href="course.css">
+    <link rel="shortcut icon" href="/photo/logo1.webp" type="image/x-icon">
+</head>
+
+<body>
+    <!-- including navigation bar -->
+    <div id="navbar"></div>
+
+    <section class="abt-course-section">
+        <div class="abt-course-content">
+            <p>
+
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga eligendi animi dolore? Numquam sit non
+                earum nisi debitis placeat minus, tenetur atque, autem amet eum repellat. Fuga ullam officia voluptate
+                officiis fugiat deleniti nihil aliquid nemo, ut alias quod distinctio minima similique cumque corporis
+                eos dolor sequi nobis magnam dolorem hic soluta! Quis voluptatum voluptates quos velit nesciunt magnam
+                provident dolorum non praesentium.
+            </p>
+        </div>
+    </section>
+
+    <!-- including footer  -->
+    <div id="footer"></div>
+
+    <script>
+        fetch('header.html').then(response => response.text()).then(data => document.getElementById('navbar').innerHTML = data)
+        fetch('footer.html').then(response => response.text()).then(data => document.getElementById('footer').innerHTML = data)
+    </script>
+
+</body>
+
+</html>
