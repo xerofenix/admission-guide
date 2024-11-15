@@ -13,16 +13,16 @@
     <!-- including navigation bar -->
     <div id="navbar"></div>
 
-    <!-- Main Section with Background Image -->
+    <!-- Main Section  -->
     <section class="fb-section">
         <div class="fb-content">
             <div id="fb-heading">
                 <h1>We are ready to take your feedback</h1>
             </div>
 
-
+<!-- form section  -->
             <div id="fb-form">
-                <form action="submit-fb">
+                <form id="feedback-form">
                     <label for="email">Enter your Email</label>
                     <input type="email" name="email" id="email" placeholder="you@example.com" required><br>
 
@@ -68,6 +68,10 @@
         fetch('header.html').then(response => response.text()).then(data => document.getElementById('navbar').innerHTML = data)
         fetch('footer.html').then(response => response.text()).then(data => document.getElementById('footer').innerHTML = data)
     </script>
+
+    <!-- feedback.html -->
+<script src="fb.js" defer></script>
+
 
 </body>
 
