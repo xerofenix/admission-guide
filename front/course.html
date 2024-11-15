@@ -14,25 +14,49 @@
     <div id="navbar"></div>
 
     <section class="abt-course-section">
-        <div class="abt-course-content">
-            <p>
 
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga eligendi animi dolore? Numquam sit non
-                earum nisi debitis placeat minus, tenetur atque, autem amet eum repellat. Fuga ullam officia voluptate
-                officiis fugiat deleniti nihil aliquid nemo, ut alias quod distinctio minima similique cumque corporis
-                eos dolor sequi nobis magnam dolorem hic soluta! Quis voluptatum voluptates quos velit nesciunt magnam
-                provident dolorum non praesentium.
-            </p>
+        <div class="search-n-filter">
+
+            <div class=" search-bar">
+                <input type="text" id="course-search" placeholder="Search for programmes or courses..."
+                    oninput="toggleSearchButton()" />
+                <button id="search-btn" onclick="searchCourses()" disabled>Search</button>
+            </div>
+
+
+            <div class="filter-options">
+                <label for="age-filter">Age:</label>
+                <input type="" id="age-filter" placeholder="Min Age" />
+
+                <label for="degree-filter">Select Degree Level:</label>
+                <select id="degree-filter">
+                    <option value="">All Degree</option>
+                    <option value="primary">Primary School I - V</option>
+                    <option value="middle">Middle School VI - VIII</option>
+                    <option value="highschool">Higher Secondary School -IX</option>
+                    <option value="intermediate">Senior Secondary School -XI</option>
+                    <option value="bachelor">Bachelor's</option>
+                    <option value="master">Master's</option>
+                </select>
+
+                <button onclick="applyFilters()">Apply Filters</button>
+            </div>
+        </div>
+
+        <div class="course-list">
+            <h2>Available Courses</h2>
+            <ul id="course-container">
+                <!-- Sample Courses Displayed Initially -->
+                <li>Computer Science - Age 18+ - Bachelor's</li>
+                <li>Physics - Age 22+ - Master's</li>
+            </ul>
         </div>
     </section>
 
-    <!-- including footer  -->
-    <div id="footer"></div>
 
-    <script>
-        fetch('header.html').then(response => response.text()).then(data => document.getElementById('navbar').innerHTML = data)
-        fetch('footer.html').then(response => response.text()).then(data => document.getElementById('footer').innerHTML = data)
-    </script>
+
+
+    <script src="course.js"></script>
 
 </body>
 
