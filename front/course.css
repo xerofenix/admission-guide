@@ -14,23 +14,133 @@ html {
 
 
 .abt-course-section {
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
     color: #070101;
-    background-color: rgb(196, 199, 201);
-   
+    background-color: rgb(196, 199, 201); */
+
+    padding: 20px;
+    /* max-width: 800px; */
+    margin: auto;
+
+    height: 100%;
+
 }
 
-.abt-course-content h1 {
-    font-size: 36px;
+.search-n-filter {
+    display: flex;
     margin-bottom: 20px;
+    margin-top: 40px;
+
+    gap: 10vw;
+
 }
 
-.abt-course-content p {
-    font-size: 18px;
-    /* max-width: 600px; */
-    text-align: center;
-    
+.search-bar {
+    display: flex;
+    gap: 1vw;
+}
+
+.search-bar input {
+    width: 50vh;
+    height: 6vh;
+    padding: 5px 5px;
+
+    border-radius: 3px none;
+
+}
+
+
+
+/* Disabled button styling */
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    color: #666;
+}
+
+/* Enabled button styling */
+#search-btn {
+
+    width: 60px;
+    height: 30px;
+
+    background-color: #ccc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover:not(:disabled) {
+    background-color: #155a96;
+}
+
+
+.filter-options {
+
+    display: flex;
+    gap: 9px;
+    justify-content: center;
+
+}
+
+.filter-options label {
+    font-weight: bold;
+
+}
+
+.filter-options input {
+    width: 63px;
+    height: 25px;
+    padding: 5px 5px;
+
+}
+
+#degree-filter {
+    width: 200px;
+    height: 30px;
+    padding: 5px 5px;
+
+    border-radius: 3px none;
+}
+
+.filter-options button {
+    width: 90px;
+    height: 30px;
+    background-color: #4981b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.filter-options button:hover{
+    background-color: #155a96;
+}
+.course-list {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.course-list h2 {
+    margin-bottom: 10px;
+}
+
+.course-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.course-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.course-list li:last-child {
+    border-bottom: none;
 }
