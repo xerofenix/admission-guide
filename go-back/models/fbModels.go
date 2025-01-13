@@ -8,5 +8,4 @@ type Feedback struct {
 	Email        string    `json:"email"`
 	FeedbackText string    `json:"feedback_text"`
 	CreatedAt    time.Time `json:"created_at" `
-	UpdatedAt    time.Time `json:"updated_at"`
 }
