@@ -1,78 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AMU Automated Admission Guide</title>
+        <link rel="stylesheet" href="fb.css" />
+        <link
+            rel="shortcut icon"
+            href="/images/logo1.webp"
+            type="image/x-icon"
+        />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMU Automated Admission Guide</title>
-    <link rel="stylesheet" href="fb.css">
-    <link rel="shortcut icon" href="/photo/logo1.webp" type="image/x-icon">
-</head>
+    <body>
+        <!-- including navigation bar -->
+        <div id="navbar"></div>
 
-<body>
-    <!-- including navigation bar -->
-    <div id="navbar"></div>
+        <!-- Main Section  -->
+        <section class="fb-section">
+            <div class="fb-content">
+                <div id="fb-heading">
+                    <h1>We are ready to take your feedback</h1>
+                </div>
 
-    <!-- Main Section  -->
-    <section class="fb-section">
-        <div class="fb-content">
-            <div id="fb-heading">
-                <h1>We are ready to take your feedback</h1>
+                <!-- form section  -->
+                <div id="fb-form">
+                    <form id="feedback-form">
+                        <label for="email">Enter your Email</label>
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="youremail@example.com"
+                            required
+                        /><br />
+
+                        <label for="fb-text">Enter your feedback</label>
+                        <input
+                            type="text"
+                            id="fb-text"
+                            placeholder="Write your feedback here"
+                            required
+                        /><br />
+
+                        <button type="submit">Submit Feedback</button>
+                    </form>
+                </div>
             </div>
 
-<!-- form section  -->
-            <div id="fb-form">
-                <form id="feedback-form">
-                    <label for="email">Enter your Email</label>
-                    <input type="email" name="email" id="email" placeholder="you@example.com" required><br>
+            <!-- pp-fb => privacy policy feedback -->
+            <div class="fb-content" id="pp-fb">
+                <h3>Privacy Notice</h3>
 
-                    <label for="fb-text">Enter your feedback</label>
-                    <input type="text" id="fb-text" placeholder="" required><br>
+                <ul>
+                    <li>
+                        <strong>Data Confidentiality: </strong>Your email and
+                        feedback are used solely to help us improve our services
+                        and respond to your needs. We prioritize your privacy
+                        and ensure that this information remains strictly
+                        confidential.
+                    </li>
+                    <li>
+                        <strong>No Sharing of Personel Data:</strong>We do not
+                        share, sell, or distribute your email or feedback to any
+                        third parties. Your information will only be accessible
+                        to our authorized team for internal purposes.
+                    </li>
 
-                    <button type="submit">Submit Feedback</button>
-                </form>
+                    <li>
+                        <strong>Data Security:</strong>We employ
+                        industry-standard security measures to protect your data
+                        from unauthorized access. Rest assured, your personal
+                        details are safe with us.
+                    </li>
+                    <li>
+                        <strong>Transparency</strong>If you have any questions
+                        or concerns about how your data is being used, feel free
+                        to contact us. We value transparency and are here to
+                        address any of your privacy concerns.
+                    </li>
+                </ul>
             </div>
-        </div>
+        </section>
 
-        <!-- pp-fb => privacy policy feedback -->
-        <div class="fb-content" id="pp-fb">
-            <h3>
-                Privacy Notice
-            </h3>
+        <!-- including footer  -->
+        <div id="footer"></div>
 
-            <ul>
-                <li>
-                    <strong>Data Confidentiality: </strong>Your email and feedback are used solely to help us improve our services and respond to your needs. We prioritize your privacy and ensure that this information remains strictly confidential.
-                </li>
-                <li>
-                    <strong>No Sharing of Personel Data:</strong>We do not share, sell, or distribute your email or feedback to any third parties. Your information will only be accessible to our authorized team for internal purposes.
-                </li>
+        <script>
+            fetch("header.html")
+                .then((response) => response.text())
+                .then(
+                    (data) =>
+                        (document.getElementById("navbar").innerHTML = data),
+                );
+            fetch("footer.html")
+                .then((response) => response.text())
+                .then(
+                    (data) =>
+                        (document.getElementById("footer").innerHTML = data),
+                );
+        </script>
 
-                <li>
-                    <strong>Data Security:</strong>We employ industry-standard security measures to protect your data from unauthorized access. Rest assured, your personal details are safe with us.
-                </li>
-                <li>
-                    <strong>Transparency</strong>If you have any questions or concerns about how your data is being used, feel free to contact us. We value transparency and are here to address any of your privacy concerns.
-                </li>
-            </ul>
-
-        </div>
-    </section>
-
-
-
-    <!-- including footer  -->
-    <div id="footer"></div>
-
-    <script>
-        fetch('header.html').then(response => response.text()).then(data => document.getElementById('navbar').innerHTML = data)
-        fetch('footer.html').then(response => response.text()).then(data => document.getElementById('footer').innerHTML = data)
-    </script>
-
-    <!-- feedback.html -->
-<script src="fb.js" defer></script>
-
-
-</body>
-
+        <!-- feedback.html -->
+        <script src="fb.js" defer></script>
+    </body>
 </html>
