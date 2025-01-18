@@ -15,8 +15,12 @@ func main() {
 	config.ConnectDB()
 
 	app := fiber.New()
+	app.Static("/", "../front")
 	routes.SetUp(app)
 
-	app.Listen(":7000")
+	err := app.Listen(":7000")
+	if err != nil {
+		panic(err)
+	}
 
 }
