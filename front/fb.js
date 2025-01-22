@@ -6,7 +6,7 @@ document
     // Get input values
     const email = document.getElementById("email").value;
     const feedback = document.getElementById("fb-text").value;
-
+    const name = document.getElementById("name").value;
     // Validate input
     if (!email || !feedback) {
       alert("Please fill out all fields.");
@@ -20,7 +20,7 @@ document
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, feedback_text: feedback }),
+        body: JSON.stringify({ name, email, feedback_text: feedback }),
       });
 
       const result = await response.json();
