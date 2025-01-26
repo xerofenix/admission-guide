@@ -12,8 +12,6 @@ html {
     height: 100%;
 }
 
-
-
 /* Main Section Styling */
 
 .main-section::before {
@@ -23,7 +21,7 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('\\photo\\ma-lib.jpg'); /* Replace with actual image path */
+    background-image: url("./images/ma-lib.jpg"); /* Replace with actual image path */
     background-size: cover;
     background-position: center;
     filter: blur(10px); /* Adjust blur intensity */
@@ -39,7 +37,6 @@ html {
     color: #070101;
     /* text-align: center; */
     /* padding: 0 20px; */
-   
 }
 
 .main-content h1 {
@@ -53,4 +50,3 @@ html {
     text-align: center;
     font-weight: 600;
 }
-

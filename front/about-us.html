@@ -1,63 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AMU Automated Admission Guide</title>
+        <link rel="stylesheet" href="about-us.css" />
+        <link
+            rel="shortcut icon"
+            href="/images/logo1.webp"
+            type="image/x-icon"
+        />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMU Automated Admission Guide</title>
-    <link rel="stylesheet" href="about-us.css">
-    <link rel="shortcut icon" href="/photo/logo1.webp" type="image/x-icon">
-</head>
+    <body>
+        <!-- including navigation bar -->
+        <div id="navbar"></div>
 
-<body>
-    <!-- including navigation bar -->
-    <div id="navbar"></div>
-
-
-    <section class="abt-us-main-section">
-        <h2>About Us</h2>
-        <!-- <p class="subtitle">Our Mission and Vision</p> -->
-        <div class="abt-us-main-content">
-            <p>
-                This website is designed as a personel project to make one informed about the admission  process of AMU. Soon we will be adding more content and information to this website.
-            </p>
-            <p>
-                We welcome your suggestions, fill out <a href="fb.html">feedback</a> form to tell us what you want to see more.
-            </p>
-            <p>
-                To contact the owner of this website, Press the <strong>Get in Touch</strong> button below or mail us at <strong>xerofenix[at]duck[dot]com</strong>
-            </p>
-        </div>
-        <div class="values">
-            <div class="value-card">
-                <h3>Integrity</h3>
-                <p>We believe in honest and transparent communication...</p>
+        <section class="abt-us-main-section">
+            <h2>About Us</h2>
+            <!-- <p class="subtitle">Our Mission and Vision</p> -->
+            <div class="abt-us-main-content">
+                <p>
+                    This website is designed as a personel project to make one
+                    informed about the admission process of AMU. Soon we will be
+                    adding more content and information to this website.
+                </p>
+                <p>
+                    We welcome your suggestions, fill out
+                    <a href="fb.html">feedback</a> form to tell us what you want
+                    to see more.
+                </p>
+                <p>
+                    To contact the owner of this website, Press the
+                    <strong>Get in Touch</strong> button below or mail us at
+                    <strong>xerofenix[at]duck[dot]com</strong>
+                </p>
             </div>
-            <div class="value-card">
-                <h3>Innovation</h3>
-                <p>Driving new solutions to make education accessible...</p>
+            <div class="values">
+                <div class="value-card">
+                    <h3>Integrity</h3>
+                    <p>We believe in honest and transparent communication...</p>
+                </div>
+                <div class="value-card">
+                    <h3>Innovation</h3>
+                    <p>Driving new solutions to make education accessible...</p>
+                </div>
+                <!-- Add more value cards as needed -->
             </div>
-            <!-- Add more value cards as needed -->
-        </div>
-        <div class="abt-us-images">
-            <img src="/photo/centenary1.jpg" alt="Our Team">
-            <img src="/photo/strachey-half.jpg" alt="Campus">
-        </div>
-        <div class="call-to-action">
-            <a href="mailto:xerorianofenix@gmail.com" class="cta-button">Get in Touch</a>
-            
-        </div>
-    </section>
+            <div class="abt-us-images">
+                <img src="/images/centenary1.jpg" alt="Our Team" />
+                <img src="/images/strachey-half.jpg" alt="Campus" />
+            </div>
+            <div class="call-to-action">
+                <a href="mailto:xerorianofenix@gmail.com" class="cta-button"
+                    >Get in Touch</a
+                >
+            </div>
+        </section>
 
+        <!-- including footer  -->
+        <div id="footer"></div>
 
-    <!-- including footer  -->
-    <div id="footer"></div>
-
-    <script>
-        fetch('header.html').then(response => response.text()).then(data => document.getElementById('navbar').innerHTML = data)
-        fetch('footer.html').then(response => response.text()).then(data => document.getElementById('footer').innerHTML = data)
-    </script>
-
-</body>
-
+        <script>
+            fetch("header.html")
+                .then((response) => response.text())
+                .then(
+                    (data) =>
+                        (document.getElementById("navbar").innerHTML = data),
+                );
+            fetch("footer.html")
+                .then((response) => response.text())
+                .then(
+                    (data) =>
+                        (document.getElementById("footer").innerHTML = data),
+                );
+        </script>
+    </body>
 </html>

@@ -1,17 +1,19 @@
 <footer>
     <p>&copy; 2024 AMU Automated Admission Guide. All Rights Reserved.</p>
 
-    <p id="disclaimer">Disclaimer: This is not the <a href="https://amu.ac.in" target="_blank">official website</a> of
-                Aligarh Muslim Universirty.
+    <p id="disclaimer">
+        Disclaimer: This is not the
+        <a href="https://amu.ac.in" target="_blank">official website</a> of
+        Aligarh Muslim Universirty.
     </p>
 
     <span>
-        This site does NOT claim 100% accuracy of fast-changing Information. However we try our best to provide upto
-        date information. YOU are responsible for independently confirming the validity of information through other
-        sources.
+        This site does NOT claim 100% accuracy of fast-changing Information.
+        However we try our best to provide upto date information. YOU are
+        responsible for independently confirming the validity of information
+        through other sources.
     </span>
 </footer>
-
 
 <style>
     footer {
@@ -19,14 +21,15 @@
         color: #fff;
         text-align: center;
         padding: 10px;
-        position: relative;
-        bottom: 0;
-        width: 100%;
+        position: relative; /* Keep the footer fixed at the bottom */
+        bottom: 0; /* Ensure it stays at the bottom */
+        left: 0; /* Ensure it stays at the left */
+        right: 0; /* Ensure it stays at the right */
+        z-index: 1000; /* Ensure it stays above other content */
     }
 
     footer span {
         font-size: 10px;
-
     }
 
     #disclaimer {
@@ -34,16 +37,19 @@
         font-size: small;
     }
 
-    #disclaimer a{
+    #disclaimer a {
         text-decoration: none;
         color: red;
         font-weight: bold;
     }
 
-
-    #disclaimer a:hover{
+    #disclaimer a:hover {
         text-decoration: none;
         color: rgb(116, 212, 6);
+    }
 
+    /* Add padding to the body to prevent content from being hidden behind the footer */
+    body {
+        padding-bottom: 50px; /* Adjust this value to match the height of the footer */
     }
 </style>

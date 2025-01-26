@@ -1,63 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AMU Automated Admission Guide</title>
+        <link rel="stylesheet" href="course.css" />
+        <link
+            rel="shortcut icon"
+            href="/images/logo1.webp"
+            type="image/x-icon"
+        />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMU Automated Admission Guide</title>
-    <link rel="stylesheet" href="course.css">
-    <link rel="shortcut icon" href="/photo/logo1.webp" type="image/x-icon">
-</head>
+    <body>
+        <!-- including navigation bar -->
+        <div id="navbar"></div>
 
-<body>
-    <!-- including navigation bar -->
-    <div id="navbar"></div>
+        <section class="abt-course-section">
+            <div class="search-n-filter">
+                <div class="search-bar">
+                    <input
+                        type="text"
+                        id="course-search"
+                        placeholder="Search for programmes or courses..."
+                        oninput="toggleSearchButton()"
+                    />
+                    <button id="search-btn" onclick="searchCourses()" disabled>
+                        Search
+                    </button>
+                </div>
 
-    <section class="abt-course-section">
+                <div class="filter-options">
+                    <label for="age-filter">Age:</label>
+                    <input type="" id="age-filter" placeholder="Min Age" />
 
-        <div class="search-n-filter">
+                    <label for="degree-filter">Select Degree Level:</label>
+                    <select id="degree-filter">
+                        <option value="">All Degree</option>
+                        <option value="primary">Primary School I - V</option>
+                        <option value="middle">Middle School VI - VIII</option>
+                        <option value="highschool">
+                            Higher Secondary School -IX
+                        </option>
+                        <option value="intermediate">
+                            Senior Secondary School -XI
+                        </option>
+                        <option value="bachelor">Bachelor's</option>
+                        <option value="master">Master's</option>
+                    </select>
 
-            <div class=" search-bar">
-                <input type="text" id="course-search" placeholder="Search for programmes or courses..."
-                    oninput="toggleSearchButton()" />
-                <button id="search-btn" onclick="searchCourses()" disabled>Search</button>
+                    <button onclick="applyFilters()">Apply Filters</button>
+                </div>
             </div>
 
-
-            <div class="filter-options">
-                <label for="age-filter">Age:</label>
-                <input type="" id="age-filter" placeholder="Min Age" />
-
-                <label for="degree-filter">Select Degree Level:</label>
-                <select id="degree-filter">
-                    <option value="">All Degree</option>
-                    <option value="primary">Primary School I - V</option>
-                    <option value="middle">Middle School VI - VIII</option>
-                    <option value="highschool">Higher Secondary School -IX</option>
-                    <option value="intermediate">Senior Secondary School -XI</option>
-                    <option value="bachelor">Bachelor's</option>
-                    <option value="master">Master's</option>
-                </select>
-
-                <button onclick="applyFilters()">Apply Filters</button>
+            <div class="course-list">
+                <h2>Available Courses</h2>
+                <ul id="course-container">
+                    <!-- Sample Courses Displayed Initially -->
+                    <li>Computer Science - Age 18+ - Bachelor's</li>
+                    <li>Physics - Age 22+ - Master's</li>
+                </ul>
             </div>
-        </div>
+        </section>
 
-        <div class="course-list">
-            <h2>Available Courses</h2>
-            <ul id="course-container">
-                <!-- Sample Courses Displayed Initially -->
-                <li>Computer Science - Age 18+ - Bachelor's</li>
-                <li>Physics - Age 22+ - Master's</li>
-            </ul>
-        </div>
-    </section>
-
-
-
-
-    <script src="course.js"></script>
-
-</body>
-
+        <!-- including footer  -->
+        <div id="footer"></div>
+        <script src="course.js"></script>
+    </body>
 </html>

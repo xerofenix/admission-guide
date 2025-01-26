@@ -12,23 +12,22 @@ html {
     height: 100%;
 }
 
-
 .fb-section {
     display: flex;
+    flex-direction: row;
+    gap: 20px;
     justify-content: center;
-    height: 105vh;
+    height: auto;
     color: #070101;
     background-color: rgb(196, 199, 201);
-   
 }
-
-
 
 .fb-content {
     width: 100%;
+    height: auto;
     /* max-width: 400px; */
-    max-width: 95vh;
-    margin: 17vh 10vh;
+    /* max-width: 95vh; */
+    margin: 17vh auto;
     padding: 2vh 2vw;
     background-color: #f9f9f9;
     border-radius: 10px;
@@ -36,10 +35,9 @@ html {
     font-family: Arial, sans-serif;
 }
 
-.fb-content h1{
+.fb-content h1 {
     text-align: center;
     margin: 0vh 1vh;
-   
 }
 
 /* Form label styling */
@@ -52,10 +50,9 @@ html {
     font-weight: bold;
 }
 
-
 /* Input fields styling */
 .fb-content input[type="email"],
-.fb-content input[type="text"] {
+.fb-content input[type="text"],textarea{
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -66,9 +63,7 @@ html {
     transition: border-color 0.3s ease;
 }
 
-.fb-content input[type="text"]{
-    height: 5rem;
-}
+
 
 /* Focus effect for input fields */
 .fb-content input[type="email"]:focus,
@@ -95,13 +90,11 @@ html {
     background-color: #0056b3;
 }
 
-
-#pp-fb h3{
+#pp-fb h3 {
     margin: 2vh 0vh;
     text-align: center;
 }
 
-#pp-fb li{
+#pp-fb li {
     margin: 2vh 0vh;
-    
 }
