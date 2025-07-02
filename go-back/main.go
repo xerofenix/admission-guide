@@ -12,7 +12,7 @@ func main() {
 	config.LoadEnv()
 
 	//connecting to DB
-	config.ConnectDB()
+	config.ConnectSqliteDB()
 
 	app := fiber.New()
 	app.Static("/", "../front")
