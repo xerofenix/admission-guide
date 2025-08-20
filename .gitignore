@@ -1,4 +1,8 @@
 .env
 fb1.css
+<<<<<<< HEAD
 
 *.gz
+=======
+st.db
+>>>>>>> 271097ddae28b9f34ff06ee120ae675b0ca58650

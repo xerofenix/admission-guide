@@ -66,6 +66,7 @@ func main() {
 		}
 		return c.Next()
 	})
+	config.ConnectSqliteDB()
 
 	routes.SetUp(app)
 
