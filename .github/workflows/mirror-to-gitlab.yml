@@ -1,0 +1,26 @@
+name: Mirror to GitLab
+
+on:
+  push:
+    branches: [main] # Sync on push to main. Add other branches if needed.
+  workflow_dispatch: # Allows manual triggering from the Actions tab
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Check out all history, not just the latest commit
+
+      - name: Configure Git for mirroring
+        run: |
+          git config user.name "xerofenix"
+          git config user.email "xerofe@tuta.io"
+
+      - name: Mirror to GitLab
+        run: |
+          git remote add gitlab https://oauth2:${GITLAB_MIRROR_TOKEN}@gitlab.com/xerofenix/admission-guide.git
+          git push --mirror --force gitlab
+        env:
+          GITLAB_MIRROR_TOKEN: ${{ secrets.GITLAB_MIRROR_TOKEN }}
