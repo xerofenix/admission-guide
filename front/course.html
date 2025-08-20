@@ -3,68 +3,71 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>AMU Automated Admission Guide</title>
-        <link rel="stylesheet" href="course.css" />
+        <title>AMU Automated Admission Guide - Courses</title>
+        <link rel="stylesheet" href="./course.css" />
         <link
             rel="shortcut icon"
-            href="/images/logo1.webp"
+            href="./images/logo1.webp"
             type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         />
     </head>
 
     <body>
         <!-- including navigation bar -->
-        <div id="navbar"></div>
+        <div id="navbar">
+            <script>
+                fetch("./header.html");
+            </script>
+        </div>
 
-        <section class="abt-course-section">
-            <div class="search-n-filter">
-                <div class="search-bar">
-                    <input
-                        type="text"
-                        id="course-search"
-                        placeholder="Search for programmes or courses..."
-                        oninput="toggleSearchButton()"
-                    />
-                    <button id="search-btn" onclick="searchCourses()" disabled>
-                        Search
-                    </button>
+        <main class="course-container">
+            <div class="search-section">
+                <div class="search-container">
+                    <div class="custom_input">
+                        <svg class="svg_icon" viewBox="0 0 24 24">
+                            <path
+                                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                            ></path>
+                        </svg>
+                        <input
+                            type="text"
+                            class="input"
+                            id="searchInput"
+                            placeholder="Search courses..."
+                        />
+                    </div>
                 </div>
 
-                <div class="filter-options">
-                    <label for="age-filter">Age:</label>
-                    <input type="" id="age-filter" placeholder="Min Age" />
-
-                    <label for="degree-filter">Select Degree Level:</label>
-                    <select id="degree-filter">
-                        <option value="">All Degree</option>
-                        <option value="primary">Primary School I - V</option>
-                        <option value="middle">Middle School VI - VIII</option>
-                        <option value="highschool">
-                            Higher Secondary School -IX
-                        </option>
-                        <option value="intermediate">
-                            Senior Secondary School -XI
-                        </option>
-                        <option value="bachelor">Bachelor's</option>
-                        <option value="master">Master's</option>
+                <div class="filters">
+                    <select id="departmentFilter" class="filter-select">
+                        <option value="">All Departments</option>
+                        <option value="science">Science</option>
+                        <option value="arts">Arts</option>
+                        <option value="commerce">Commerce</option>
+                        <option value="engineering">Engineering</option>
                     </select>
-
-                    <button onclick="applyFilters()">Apply Filters</button>
+                    <select id="levelFilter" class="filter-select">
+                        <option value="">All Levels</option>
+                        <option value="undergraduate">Undergraduate</option>
+                        <option value="postgraduate">Postgraduate</option>
+                        <option value="phd">PhD</option>
+                    </select>
                 </div>
             </div>
 
-            <div class="course-list">
-                <h2>Available Courses</h2>
-                <ul id="course-container">
-                    <!-- Sample Courses Displayed Initially -->
-                    <li>Computer Science - Age 18+ - Bachelor's</li>
-                    <li>Physics - Age 22+ - Master's</li>
-                </ul>
+            <div class="courses-grid" id="coursesContainer">
+                <!-- Course cards will be dynamically added here -->
+                <div class="no-results" style="display: none">
+                    <i class="fas fa-search"></i>
+                    <p>No courses found matching your search criteria.</p>
+                </div>
             </div>
-        </section>
+        </main>
 
-        <!-- including footer  -->
-        <div id="footer"></div>
-        <script src="course.js"></script>
+        <script src="./course.js"></script>
     </body>
 </html>
